@@ -49,7 +49,7 @@
               <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#findUs">Ajuda </a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contato</a></li>
-            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#!">Sign In</a>
+            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="{{ route('registro') }}">Criar conta</a>
           </div>
         </div>
       </nav>

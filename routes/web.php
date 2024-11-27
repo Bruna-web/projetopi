@@ -33,5 +33,5 @@ Route::post('/login', function (Request $request) {
 });
 
 Route::get('/registro', function () {
-    return view('registro');
-});
+    return view (('registro'));
+}) -> name('registro');
