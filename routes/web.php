@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // Rota para exibir o formulário de login
@@ -35,3 +35,11 @@ Route::post('/login', function (Request $request) {
 Route::get('/registro', function () {
     return view (('registro'));
 }) -> name('registro');
+
+Route::get('/home', function () {
+    return view (('home'));
+}) -> name('home');
+
+Route::get('/login', function () {
+    return view (('login'));
+}) -> name('login');

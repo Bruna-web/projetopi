@@ -13,6 +13,25 @@ body {
     background: #ecf0f3;
 }
 
+button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove as bordas */
+    padding: 0; /* Remove qualquer espaçamento extra */
+    cursor: pointer; /* Deixa o cursor como uma mãozinha ao passar por cima */
+    display: inline-flex; /* Garante que o botão seja flexível, adequado para o ícone */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    
+
+}
+      
+
+button svg {
+    width: 40px; /* Ajuste o tamanho do ícone */
+    height: 40px; /* Ajuste o tamanho do ícone */
+}
+
+
 .wrapper {
     max-width: 350px;
     min-height: 500px;
