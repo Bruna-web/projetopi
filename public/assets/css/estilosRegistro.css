@@ -21,7 +21,7 @@ button {
     display: inline-flex; /* Garante que o botão seja flexível, adequado para o ícone */
     align-items: center; /* Centraliza o ícone verticalmente */
     justify-content: center; /* Centraliza o ícone horizontalmente */
-
+    border-radius: 50%;
 }
       
 
@@ -31,9 +31,8 @@ button svg {
 }
 
 button:hover { 
-
-    background-color: transparent;
-    color: blue;
+    color: white;
+    background-color: #222f67;
 }
 
 .wrapper {
@@ -83,6 +82,8 @@ button:hover {
     margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper .form-field .fas {
@@ -90,15 +91,17 @@ button:hover {
 }
 
 .wrapper .btn {
-    box-shadow: none;
     width: 150px;
     height: 40px;
     background-color: #03A9F4;
     color: #fff;
     border-radius: 25px;
-    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
     letter-spacing: 1.3px;
-    margin-left: 380px;
+    margin-top: 20px;
+    padding: 0;
+    margin-left: 90px;
+    border: 0;
+    display: inline-block;
 }
 
 .wrapper .btn:hover {
@@ -106,6 +109,10 @@ button:hover {
 }
 
 .wrapper a {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     font-size: 0.8rem;
     color: #03A9F4;

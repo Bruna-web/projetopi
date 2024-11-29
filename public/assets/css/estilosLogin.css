@@ -21,8 +21,7 @@ button {
     display: inline-flex; /* Garante que o botão seja flexível, adequado para o ícone */
     align-items: center; /* Centraliza o ícone verticalmente */
     justify-content: center; /* Centraliza o ícone horizontalmente */
-    
-
+    border-radius: 50%;
 }
       
 
@@ -31,6 +30,10 @@ button svg {
     height: 40px; /* Ajuste o tamanho do ícone */
 }
 
+button:hover { 
+    color: white;
+    background-color: #222f67;
+}
 
 .wrapper {
     max-width: 350px;
