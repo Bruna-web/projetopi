@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="assets/css/estilosRegistro.css">
 
 <div class="wrapper">
-<div  style="display: absolut; margin-left: -280px">
+<div  style="display: absolut; margin-left: -360px">
     <a href="{{ route('home') }}">
         <button class="btn-voltar">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -56,7 +56,9 @@
         <input type="text" name="userCep" id="userCep" placeholder="CEP" pattern="\d{5}-\d{3}" required>
     </div>
 </form>
-
-    <a href="{{ route('home') }}"> <button type="submit" class="btn mt-3">Criar conta</button></a>
+    
+    <a href="{{ route('home') }}"> 
+        <button type="submit" class="btn mt-3">Criar conta</button>
+    </a>
 
 </div>
