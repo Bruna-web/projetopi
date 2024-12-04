@@ -40,14 +40,14 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="{{ route('home') }}"><img src="assets/img/gallery/logoCliniCall.png" width="200" alt="logo" /></a>
+        <div class="container"><a class="navbar-brand" href="{{ route('home') }}"><img src="assets/img/gallery/logoCliniCall.png" width="250" alt="logo" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">Sobre nós</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#departments">Serviços</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Ajuda</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contato</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#Serviços">Serviços</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#SobreNós">Sobre nós</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#Ajuda">Ajuda</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#Contato">Contato</a></li>
             </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="{{ route('registro') }}">Criar conta</a>
             </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="{{ route('login') }}">Entrar</a>
           </div>
@@ -62,8 +62,11 @@
           <div class="row min-vh-xl-100 min-vh-xxl-25">
             <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/gallery/hero.png" alt="hero-header" /></div>
             <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
-              <h1 class="fw-light font-base fs-6 fs-xxl-7">We're <strong>determined </strong>for<br />your&nbsp;<strong>better life.</strong></h1>
-              <p class="fs-1 mb-5">You can get the care you need 24/7 – be it online or in <br />person. You will be treated by caring specialist doctors. </p><a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Make an Appointment</a>
+              <h1 class="fw-light font-base fs-6 fs-xxl-7">Bem-vindo ao <br> <strong>CliniCall</strong></h1> 
+              <h4 class="font-base Brush Script MT, Brush Script Std, cursive"> Uma plataforma feita especialmente para você e sua comunidade, que facilita o agendamento de consultas e exames nos postos de saúde, sem nenhum custo.</h4>
+              <p class="fs-1 mb-5">Aproveite a praticidade e a economia que o CliniCall oferece para cuidar de sua saúde e da saúde de quem você ama. <br>
+                Agende hoje mesmo e experimente a facilidade de ter o atendimento médico ao seu alcance, sem custos!
+                <p><a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Agende aqui</a></p>
             </div>
           </div>
         </div>
@@ -72,16 +75,16 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-5" id="departments">
+      <section class="py-5" id="Serviços">
 
         <div class="container">
           <div class="row">
             <div class="col-12 py-3">
-              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/bg-departments.png);background-position:top center;background-size:contain;">
+              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/serviços.png);background-position:top center;background-size:contain;">
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">OUR DEPARTMENTS</h1>
+              <h1 class="text-center">ALGUNS SETORES DE ATENDIMENTO </h1>
             </div>
           </div>
         </div>
@@ -102,46 +105,47 @@
           <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/neurology.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/neurology.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Neurology</p>
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/exameslab.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/exameslab.png" alt="..." width="110" />
+                    <p class="fs-1 fs-xxl-2 text-center">Laboratório</p>
                   </a></div>
               </div>
             </div>
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/eye-care.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/eye-care.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Eye care</p>
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/clinicageral.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/clinicageral.png" alt="..." width="110"/>
+                    <p class="fs-1 fs-xxl-2 text-center">Clínica Geral</p>
                   </a></div>
               </div>
             </div>
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/cardiac.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/cardiac.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Cardiac care</p>
+              <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/psicologia.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/psicologia.png" alt="..." width="110"/>
+                    <p class="fs-1 fs-xxl-2 text-center">Psicologia</p>
                   </a></div>
               </div>
             </div>
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/heart.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/heart.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Heart care</p>
+              <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/cardiologia.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/cardiologia.png" alt="..." width="110"/>
+                    <p class="fs-1 fs-xxl-2 text-center">Cardiologia</p>
                   </a></div>
               </div>
             </div>
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/osteoporosis.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/osteoporosis.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Osteoporosis</p>
+              <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/odontologia.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/odontologia.png" alt="..." width="110"/>
+                    <p class="fs-1 fs-xxl-2 text-center">Odontologia</p>
                   </a></div>
               </div>
             </div>
             <div class="col-auto col-md-4 col-lg-auto text-xl-start">
               <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/ent.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="assets/img/icons/ent.svg" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">ENT</p>
+              <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="assets/img/icons/enfermagem.png" alt="..." width="100"/><img class="mb-3 deparment-icon-hover" src="assets/img/icons/enfermagem.png" alt="..." width="110"/>
+                <p class="fs-1 fs-xxl-2 text-center">Enfermagem</p>
                   </a></div>
               </div>
             </div>
+            
           </div>
         </div>
         <!-- end of .container-->
@@ -162,7 +166,6 @@
             <div class="col-md-7 col-xxl-6 text-center text-md-start">
               <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Eye Care with Top Professionals<br class="d-none d-sm-block" />and In Budget.</h2>
               <p class="text-light">We've built a healthcare system that puts your needs first.<br class="d-none d-sm-block" />For us, there is nothing more important than the health of <br class="d-none d-sm-block" />you and your loved ones. </p>
-              <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a></div>
             </div>
           </div>
         </div>
@@ -171,7 +174,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pb-0" id="about">
+      <section class="pb-0" id="SobreNós">
 
         <div class="container">
           <div class="row">
@@ -180,7 +183,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">ABOUT US</h1>
+              <h1 class="text-center">SOBRE NÓS</h1>
             </div>
           </div>
         </div>
@@ -222,7 +225,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">OUR DOCTORS</h1>
+              <h1 class="text-center">NOSSOS PROFISSIONAIS</h1>
             </div>
           </div>
         </div>
@@ -391,7 +394,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">PEOPLE WHO LOVE US</h1>
+              <h1 class="text-center">COMENTÁRIOS</h1>
             </div>
           </div>
         </div>
@@ -468,7 +471,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-5">
+      <section class="py-5" id="Contato">
 
         <div class="container">
           <div class="row">
@@ -477,7 +480,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">APPOINTMENT</h1>
+              <h1 class="text-center">CONTATO</h1>
             </div>
           </div>
         </div>
@@ -546,7 +549,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">RECENT BLOGPOSTS</h1>
+              <h1 class="text-center">ARTIGOS RECENTES</h1>
             </div>
           </div>
         </div>
@@ -612,42 +615,10 @@
         </div>
       </section>
       <section class="bg-primary">
-        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/cta-bg.png);background-position:center right;margin-top:-8.125rem;background-size:contain;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h2 class="fw-bold text-light">Get an update every week</h2>
-              <p class="text-soft-primary">Livedoc was created in order to improve the patient experience. <br />Providing world-class tests, and a wide range of other services.</p>
-            </div>
-            <div class="col-lg-6">
-              <h5 class="mb-3 text-soft-primary">SUBSCRIBE TO NEWSLETTER </h5>
-              <form class="row gx-2 gy-2 align-items-center">
-                <div class="col">
-                  <div class="input-group-icon">
-                    <label class="visually-hidden" for="inputEmailCta">Address</label>
-                    <input class="form-control form-livedoc-control form-cta-control text-soft-primary" id="inputEmailCta" type="email" placeholder="Email" />
-                  </div>
-                </div>
-                <div class="d-grid gap-3 col-sm-auto">
-                  <button class="btn btn-lg btn-light rounded-3 px-5 py-3" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-0 bg-secondary">
-        <div class="bg-holder opacity-25" style="background-image:url(assets/img/gallery/dot-bg.png);background-position:top left;margin-top:-3.125rem;background-size:auto;">
-        </div>
-        <!--/.bg-holder-->
-
         <div class="container">
           <div class="row py-8">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/footer-logo.png" height="51" alt="" /></a>
-              <p class="text-light my-4">The world's most trusted <br />telehealth company.</p>
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/CliniCallLogoBlackAndWhite.png" width="350" alt="" /></a>
+              <p class="text-light my-4">CliniCall: Sua Saúde em Primeiro Lugar</p>
             </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
               <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Departments</h5>
@@ -668,9 +639,9 @@
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
               <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> Customer Care</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="footer-link" href="#!">About Us</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Contact US</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Get Update</a></li>
+                <li class="lh-lg"><a class="footer-link" href="#SobreNós">Sobre Nós</a></li>
+                <li class="lh-lg"><a class="footer-link" href="#Contato">Contato</a></li>
+                <li class="lh-lg"><a class="footer-link" href="#!">Ajuda</a></li>
               </ul>
             </div>
           </div>
@@ -684,14 +655,7 @@
           <div class="container">
             <div class="row justify-content-md-between justify-content-evenly py-4">
               <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Your Company, 2021</p>
-              </div>
-              <div class="col-12 col-sm-8 col-md-6">
-                <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
-                  <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-info" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-                </p>
+                <p class="fs--1 my-2 fw-bold text-200">Todos os direitos reservados &copy; CliniCall, 2024.</p>
               </div>
             </div>
           </div>
