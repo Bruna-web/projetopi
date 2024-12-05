@@ -44,12 +44,9 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link" href="#Serviços">Serviços</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#Setores">Setores</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#SobreNós">Sobre nós</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#Ajuda">Ajuda</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#Contato">Contato</a></li>
-            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="{{ route('registro') }}">Criar conta</a>
-            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="{{ route('login') }}">Entrar</a>
           </div>
         </div>
       </nav>
@@ -66,7 +63,7 @@
               <h4 class="font-base Brush Script MT, Brush Script Std, cursive"> Uma plataforma feita especialmente para você e sua comunidade, que facilita o agendamento de consultas e exames nos postos de saúde, sem nenhum custo.</h4>
               <p class="fs-1 mb-5">Aproveite a praticidade e a economia que o CliniCall oferece para cuidar de sua saúde e da saúde de quem você ama. <br>
                 Agende hoje mesmo e experimente a facilidade de ter o atendimento médico ao seu alcance, sem custos!
-                <p><a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Agende aqui</a></p>
+                <p><a class="btn btn-lg btn-primary rounded-pill" href="{{ route('agendamento') }}" role="button">Agende aqui</a></p>
             </div>
           </div>
         </div>
@@ -75,7 +72,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-5" id="Serviços">
+      <section class="py-5" id="Setores">
 
         <div class="container">
           <div class="row">
@@ -164,8 +161,8 @@
           <div class="row align-items-center">
             <div class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/eye-care.png" alt="..." /></div>
             <div class="col-md-7 col-xxl-6 text-center text-md-start">
-              <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Eye Care with Top Professionals<br class="d-none d-sm-block" />and In Budget.</h2>
-              <p class="text-light">We've built a healthcare system that puts your needs first.<br class="d-none d-sm-block" />For us, there is nothing more important than the health of <br class="d-none d-sm-block" />you and your loved ones. </p>
+              <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Cuide de sua saúde com a<br class="d-none d-sm-block" />praticidade que você precisa</h2>
+              <p class="text-light">Pensando no seu bem-estar, desenvolvemos um sistema de agendamento online eficiente e fácil de usar. Não perca mais tempo com esperas intermináveis.<br class="d-none d-sm-block" class="d-none d-sm-block" />Agende sua consulta no momento mais conveniente e tenha acesso rápido a profissionais de saúde qualificados </p>
             </div>
           </div>
         </div>
@@ -203,11 +200,20 @@
           <div class="row align-items-center">
             <div class="col-md-6 order-lg-1 mb-5 mb-lg-0"><img class="fit-cover rounded-circle w-100" src="assets/img/gallery/health-care.png" alt="..." /></div>
             <div class="col-md-6 text-center text-md-start">
-              <h2 class="fw-bold mb-4">We are developing a healthcare <br class="d-none d-sm-block" />system around you</h2>
-              <p>We think that everyone should have easy access to excellent <br class="d-none d-sm-block" />healthcare. Our aim is to make the procedure as simple as <br class="d-none d-sm-block" />possible for our patients and to offer treatment no matter<br class="d-none d-sm-block" />where they are — in person or at their convenience. </p>
-              <div class="py-3">
-                <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
-              </div>
+            <strong>
+            <h2 class="fw-bold mb-4"> CliniCall: A Saúde da comunidade ao seu alcance </h2>
+              <p>Bem-vindo ao CliniCall, a plataforma de agendamento online criada especialmente para facilitar o acesso à saúde para as comunidades. Pensando em oferecer mais conforto e agilidade para o seu cuidado, 
+                a CliniCall permite que você agende suas consultas de maneira simples, 
+                rápida e sem sair de casa.
+                <br class="d-none d-sm-block" />Sabemos o quanto o tempo é precioso, especialmente quando se trata da sua saúde e da sua família. 
+                Por isso, nosso site foi desenvolvido para que você tenha total controle sobre o agendamento de consultas nos postos de saúde, 
+                diretamente do seu celular ou computador, sem enfrentar filas ou perder tempo com burocracias. 
+                <br class="d-none d-sm-block" /> Com o CliniCall, você escolhe o melhor horário para o seu atendimento, de acordo com a disponibilidade dos postos de saúde da sua região. 
+                Nossa plataforma é intuitiva e fácil de usar, pensada para garantir que todos, 
+                independentemente da idade ou habilidade digital, possam acessar os cuidados de saúde necessários.
+                <br class="d-none d-sm-block" /> Cuidar de você e de sua família nunca foi tão simples e acessível. 
+                Agende sua consulta no CliniCall e aproveite a praticidade de ter a saúde ao alcance de um clique!</p>
+                </strong>
             </div>
           </div>
         </div>
@@ -251,222 +257,42 @@
                       <div class="col-md-4 mb-8 mb-md-0">
                         <div class="card card-span h-100 shadow">
                           <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
+                            <h5 class="mt-3">Beatriz Pereira </h5>
+                            <p class="mb-0 fs-xxl-1">Pediatra</p>
+                            <p class="text-600 mb-0">Pernambuco, Brasil</p>
+                            <p class="text-600 mb-4">10 anos de experiência</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-4 mb-8 mb-md-0">
                         <div class="card card-span h-100 shadow">
                           <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
+                            <h5 class="mt-3">Juliana Martins</h5>
+                            <p class="mb-0 fs-xxl-1">Ginecologista</p>
+                            <p class="text-600 mb-0">Pernambuco, Brasil</p>
+                            <p class="text-600 mb-4">12 anos de experiência</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-4 mb-8 mb-md-0">
                         <div class="card card-span h-100 shadow">
                           <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
+                            <h5 class="mt-3">André Gonçalves</h5>
+                            <p class="mb-0 fs-xxl-1">Fisioterapia</p>
+                            <p class="text-600 mb-0">Pernambuco, Brasil</p>
+                            <p class="text-600 mb-4">25 anos de experiência</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row h-100 m-lg-7 mx-3 mt-6 mx-md-4 my-md-7">
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100 m-lg-7 mx-3 mt-6 mx-md-4 my-md-7">
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-5">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/people.png);background-position:top center;background-size:contain;">
-              </div>
-              <!--/.bg-holder-->
-
-              <h1 class="text-center">COMENTÁRIOS</h1>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section class="py-8">
-        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/people-bg-1.png);background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row align-items-center offset-sm-1">
-            <div class="carousel slide" id="carouselPeople" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <div class="row h-100">
-                    <div class="col-sm-3 text-center"><img src="assets/img/gallery/people-who-loves.png" width="100" alt="" />
-                      <h5 class="mt-3 fw-medium text-secondary">Edward Newgate</h5>
-                      <p class="fw-normal mb-0">Founder Circle</p>
-                    </div>
-                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
-                      <h2>Fantastic Response!</h2>
-                      <div class="my-2"><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
-                      <p>This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <div class="row h-100">
-                    <div class="col-sm-3 text-center"><img src="assets/img/gallery/people-who-loves.png" width="100" alt="" />
-                      <h5 class="mt-3 fw-medium text-secondary">Jhon Doe</h5>
-                      <p class="fw-normal mb-0">UI/UX Designer</p>
-                    </div>
-                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
-                      <h2>Fantastic Response!</h2>
-                      <div class="my-2"><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
-                      <p>This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row h-100">
-                    <div class="col-sm-3 text-center"><img src="assets/img/gallery/people-who-loves.png" width="100" alt="" />
-                      <h5 class="mt-3 fw-medium text-secondary">Jeny Doe</h5>
-                      <p class="fw-normal mb-0">Web Designer</p>
-                    </div>
-                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
-                      <h2>Fantastic Response!</h2>
-                      <div class="my-2"><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
-                      <p>This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="position-relative z-index-2 mt-5">
-                  <ol class="carousel-indicators">
-                    <li class="active" data-bs-target="#carouselPeople" data-bs-slide-to="0"></li>
-                    <li data-bs-target="#carouselPeople" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselPeople" data-bs-slide-to="2"> </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- ============================================-->
@@ -540,7 +366,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-5">
+      <section class="py-5" id="Ajuda">
 
         <div class="container">
           <div class="row">
@@ -549,99 +375,33 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">ARTIGOS RECENTES</h1>
+              <h1 class="text-center">Ajuda</h1>
             </div>
           </div>
         </div>
         <!-- end of .container-->
+          <form>
+              
 
+          </form>
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
 
-      <section>
-        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/dot-bg.png);background-position:top left;background-size:auto;">
-        </div>
-        <!--/.bg-holder-->
 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/covid-19.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 21, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">COVID-19: The Most Up-to-Date Information</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/laboratories.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Lifestyle</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 25, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Importance of Accreditation for Laboratories</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/nicotine.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 28, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">The dangers of nicotine are addressed in depth</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/treatment.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 30, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Treatment of patients with diabetes during COVID-19</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="bg-primary">
         <div class="container">
           <div class="row py-8">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/CliniCallLogoBlackAndWhite.png" width="350" alt="" /></a>
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/CliniCallLogoWhite.png" width="350" alt="" /></a>
               <p class="text-light my-4">CliniCall: Sua Saúde em Primeiro Lugar</p>
             </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-              <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Departments</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="footer-link" href="#!">Eye care</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Cardiac are</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Heart care</a></li>
-              </ul>
-            </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">Membership</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="footer-link" href="#!">Free trial</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Silver</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Premium</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> Customer Care</h5>
+              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">Atendimento ao cliente</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="footer-link" href="#SobreNós">Sobre Nós</a></li>
                 <li class="lh-lg"><a class="footer-link" href="#Contato">Contato</a></li>
-                <li class="lh-lg"><a class="footer-link" href="#!">Ajuda</a></li>
+                <li class="lh-lg"><a class="footer-link" href="#Ajuda">Ajuda</a></li>
               </ul>
             </div>
           </div>
