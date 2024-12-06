@@ -328,33 +328,24 @@
             <div class="col-lg-6 z-index-2">
               <form class="row g-3">
                 <div class="col-md-6">
-                  <label class="visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
+                  <label class="visually-hidden" for="inputNome">Nome</label>
+                  <input class="form-control form-livedoc-control" id="inputName" type="text" required placeholder="Nome Completo" />
                 </div>
                 <div class="col-md-6">
-                  <label class="visually-hidden" for="inputPhone">Phone</label>
-                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label visually-hidden" for="inputCategory">Category</label>
-                  <select class="form-select" id="inputCategory">
-                    <option selected="selected">Category</option>
-                    <option> Category One</option>
-                    <option> Category Two</option>
-                    <option> Category Three</option>
-                  </select>
+                  <label class="visually-hidden" for="inputNumero">Número</label>
+                  <input class="form-control form-livedoc-control" id="inputNumero" type="tel" required placeholder="(xx) xxxxx-xxxx" pattern="\(\d{2}\) \d{5}-\d{4}"/>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label visually-hidden" for="inputEmail">Email</label>
-                  <input class="form-control form-livedoc-control" id="inputEmail" type="email" placeholder="Email" />
+                  <input class="form-control form-livedoc-control" id="inputEmail" type="email" required placeholder="E-mail"/>
                 </div>
                 <div class="col-md-12">
-                  <label class="form-label visually-hidden" for="validationTextarea">Message</label>
+                  <label class="form-label visually-hidden" for="validationTextarea">Mensagem</label>
                   <textarea class="form-control form-livedoc-control" id="validationTextarea" placeholder="Message" style="height: 250px;" required="required"></textarea>
                 </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn btn-primary rounded-pill" type="submit">Sign in</button>
+                    <button class="btn btn-primary rounded-pill" type="submit">Enviar e-mail</button>
                   </div>
                 </div>
               </form>
@@ -381,7 +372,7 @@
         </div>
         <!-- end of .container-->
           <form>
-              
+              <h1></h1>
 
           </form>
       </section>
