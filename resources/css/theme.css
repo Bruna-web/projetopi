@@ -17871,3 +17871,262 @@ label {
 |   User Styles
 -----------------------------------------------*/
 /*# sourceMappingURL=theme.css.map */
+
+/* CSS da tela de ajuda
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #28a745; /* Cor verde para cabeçalho */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.faq {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+details {
+  background-color: #f9f9f9;
+  /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #28a745; /* Cor verde para cabeçalho */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.faq {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+details {
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  background-color: #e6f7ff;
+}
+
+summary {
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+summary:hover {
+  color: #007bff;
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Remove marker for the details tag */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+footer p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Estilo de links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  background-color: #e6f7ff;
+}
+
+summary {
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+summary:hover {
+  color: #007bff;
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Remove marker for the details tag */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+footer p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Estilo de links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
