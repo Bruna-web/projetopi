@@ -280,7 +280,7 @@
                             <h5 class="mt-3">André Gonçalves</h5>
                             <p class="mb-0 fs-xxl-1">Fisioterapia</p>
                             <p class="text-600 mb-0">Pernambuco, Brasil</p>
-                            <p class="text-600 mb-4">25 anos de experiência</p>
+                            <p class="text-600 mb-4">25 anos de experiência</p>.
                           </div>
                         </div>
                       </div>
