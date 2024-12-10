@@ -16,10 +16,9 @@
   </header>
 
   <main>
-
-  <div class="btn-container">
+    <div class="btn-container">
       <a href="{{ route('home') }}">
-        <button onclick="window.history.back()" class="btn-voltar">
+        <button class="btn-voltar">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
           </svg>
@@ -49,9 +48,6 @@
       <label for="medico">Médico:</label>
       <select id="medico" name="medico" required>
         <option value="" disabled selected>Selecione...</option>
-        <option value="medico-1">Dr. João Silva</option>
-        <option value="medico-2">Dra. Maria Oliveira</option>
-        <option value="medico-3">Dr. Carlos Santos</option>
       </select>
 
       <!-- Passo 3: Data e Hora -->
@@ -61,11 +57,13 @@
       <label for="hora">Horário:</label>
       <select id="hora" name="hora" required>
         <option value="" disabled selected>Selecione...</option>
+        <option value="08:00">08:00</option>
         <option value="09:00">09:00</option>
         <option value="10:00">10:00</option>
         <option value="11:00">11:00</option>
         <option value="14:00">14:00</option>
         <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
       </select>
 
       <!-- Passo 4: Dados Pessoais -->
@@ -88,7 +86,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalAgendamentoLabel">Confirmação de Agendamento</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -96,39 +94,73 @@
           <p id="msgAgendamento"></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    $(document).ready(function() {
-      // Quando o formulário for enviado
+  $(document).ready(function() {
+      const especialidadeMedicos = {
+        "atendimento-medico": ["Dr. João Silva", "Dra. Ana Souza"],
+        "enfermagem": ["Enf. Carlos Lima", "Enf. Mariana Ribeiro"],
+        "farmacia": ["Farm. Paula Costa"],
+        "exames-laboratorio": ["Dr. Pedro Alves"],
+        "vacina": ["Enf. Luiza Santos"],
+        "odontologia": ["Dr. Marcos Vinícius", "Dra. Clara Mendes"],
+        "psicologia": ["Psic. Laura Nunes", "Psic. Felipe Andrade"],
+        "fisioterapia": ["Fisio. André Martins"],
+        "nutricao": ["Nut. Camila Braga"],
+        "controle-doencas-cronicas": ["Dr. Júlio Cesar"],
+        "triagem": ["Enf. Ricardo Silva"]
+      };
+
+      $('#especialidade').on('change', function() {
+        const especialidade = $(this).val();
+        const medicos = especialidadeMedicos[especialidade] || [];
+        const medicoSelect = $('#medico');
+        medicoSelect.empty();
+        medicoSelect.append('<option value="" disabled selected>Selecione...</option>');
+        medicos.forEach(medico => {
+          medicoSelect.append(`<option value="${medico}">${medico}</option>`);
+        });
+      });
+
       $('.agendamento-form').on('submit', function(e) {
-        e.preventDefault(); // Impede o envio padrão
+        e.preventDefault();
+        
+        // Coleta os dados
+        const especialidade = $('#especialidade').val();
+        const medico = $('#medico').val();
+        const data = new Date($('#data').val());
+        const hora = $('#hora').val();
+        const nome = $('#nome').val();
+        const cpf = $('#cpf').val();
+        const telefone = $('#telefone').val();
 
-        // Obtém os dados do formulário
-        var formData = $(this).serialize();
-        console.log(formData);  // Exibe os dados para depuração
-
-        // Envia os dados via AJAX
         $.ajax({
-          url: '/agendamento', // Rota para o agendamento
-          type: 'POST',
-          data: formData,
-          success: function(response) {
-            // Exibe a resposta no modal
-            $('#msgAgendamento').text(response.message);
-            $('#modalAgendamento').modal('show');
+          url: "{{ route('agendamento.store') }}",
+          type: "POST",
+          data: {
+            _token: "{{ csrf_token() }}", 
+            especialidade,
+            medico,
+            data: data.toLocaleDateString('pt-BR'),
+            hora,
+            nome,
+            cpf,
+            telefone
           },
-          error: function(xhr, status, error) {
-            console.log(xhr.responseText); // Exibe o erro no console
-            $('#msgAgendamento').text("Ocorreu um erro ao realizar o agendamento. Tente novamente.");
-            $('#modalAgendamento').modal('show');
+          success: function(response) {
+            window.location.href = "{{ route('agendamento.confirmacao') }}";
+          },
+          error: function() {
+            alert("Ocorreu um erro ao processar o agendamento. Tente novamente.");
           }
         });
       });
-    });
+  });
   </script>
-</
+</body>
+</html>

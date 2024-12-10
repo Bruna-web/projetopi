@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
 
     <!-- ===============================================-->
@@ -47,6 +48,7 @@
               <li class="nav-item px-2"><a class="nav-link" href="#Setores">Setores</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#SobreNós">Sobre nós</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#Contato">Contato</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#Ajuda">Ajuda</a></li>
           </div>
         </div>
       </nav>
@@ -280,7 +282,7 @@
                             <h5 class="mt-3">André Gonçalves</h5>
                             <p class="mb-0 fs-xxl-1">Fisioterapia</p>
                             <p class="text-600 mb-0">Pernambuco, Brasil</p>
-                            <p class="text-600 mb-4">25 anos de experiência</p>.
+                            <p class="text-600 mb-4">25 anos de experiência</p>
                           </div>
                         </div>
                       </div>

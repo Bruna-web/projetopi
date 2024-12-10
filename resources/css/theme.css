@@ -14,6 +14,29 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@media (min-width: 1024px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      font-size: 12px;
+  }
+  .menu {
+      display: none;
+  }
+}
+
+
 :root {
   --bs-blue: #5F37EF;
   --bs-indigo: #727cf5;
