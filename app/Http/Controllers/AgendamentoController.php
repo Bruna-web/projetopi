@@ -11,10 +11,8 @@ class AgendamentoController extends Controller
         return view('agendamento');
     }
 
-    // Método para salvar o agendamento
     public function store(Request $request)
     {
-        // Valida os dados do formulário
         $validated = $request->validate([
             'especialidade' => 'required|string',
             'medico' => 'required|string',
@@ -31,12 +29,13 @@ class AgendamentoController extends Controller
         $request->session()->put('nome', $request->nome);
         $request->session()->put('cpf', $request->cpf);
         $request->session()->put('telefone', $request->telefone);
+        $request->session()->put('posto', $request->posto);
         return redirect()->route('confirmacao');
     }
     public function confirmacao(Request $request)
     {
         if (!$request->session()->has('especialidade')) {
-            return redirect()->route('agendamento.create'); 
+            return redirect()->route('agendamento'); 
         }
 
         return view('confirmacao'); 

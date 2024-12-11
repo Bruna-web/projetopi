@@ -7,16 +7,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/registro', function () {
-    return view('registro');
-})->name('registro');
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
-
-Route::get('/agendamento', [AgendamentoController::class, 'create'])->name('agendamento.create');
-
+Route::get('/agendamento', [AgendamentoController::class, 'create'])->name('agendamento');
+Route::get('/confirmacao', [AgendamentoController::class, 'confirmacao'])->name('confirmacao');
 Route::post('/agendamento', [AgendamentoController::class, 'store'])->name('agendamento.store');
-
-Route::get('/agendamentoconfirmacao', [AgendamentoController::class, 'confirmacao'])->name('agendamento.confirmacao');

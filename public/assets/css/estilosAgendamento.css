@@ -1,4 +1,24 @@
-/* Global Styles */
+@media (min-width: 1024px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      font-size: 12px;
+  }
+  .menu {
+      display: none;
+  }
+}
+
 .btn-container {
   position: relative;
 }

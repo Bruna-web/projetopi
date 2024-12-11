@@ -45,6 +45,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+            <li class="nav-item px-2"><a class="nav-link" href="{{ route('agendamento') }}">Agendamento</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#Setores">Setores</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#SobreNós">Sobre nós</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="#Contato">Contato</a></li>
@@ -370,80 +371,80 @@
 
               <h1 class="text-center">Central de Ajuda - CliniCall</h1><br><br>
 
-    <div class="container">
-        <section class="faq">
-            <h4>1. Agendamento de Consultas</h4>
-            <details>
-                <summary>Como posso agendar uma consulta?</summary>
-                <p>Para agendar uma consulta, basta acessar a área de agendamentos do nosso site, localizado na página inicial. Após aperta no botão "agende aqui" coloque seus dados e confirme, para finalizar.</p>
-            </details>
-            <details>
-                <summary>Quais especialidades estão disponíveis para consulta?</summary>
-                <p>Oferecemos consultas em diversas especialidades, incluindo: Clínica Geral, Ginecologia, Pediatria, Dentista, Psicologia, Fisioterapia, entre outras especialidades.</p>
-            </details>
-        </section>
+<div class="container">
+    <section class="faq">
+        <h4>1. Agendamento de Consultas</h4>
+        <details>
+            <summary>Como posso agendar uma consulta?</summary>
+            <p>Para agendar uma consulta, basta acessar a área de agendamentos do nosso site, localizado na página inicial. Após aperta no botão "agende aqui" coloque seus dados e confirme, para finalizar.</p>
+        </details>
+        <details>
+            <summary>Quais especialidades estão disponíveis para consulta?</summary>
+            <p>Oferecemos consultas em diversas especialidades, incluindo: Clínica Geral, Ginecologia, Pediatria, Dentista, Psicologia, Fisioterapia, entre outras especialidades.</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>2. Horários de Atendimento</h4>
-            <details>
-                <summary>Quais são os horários de funcionamento do posto de saúde?</summary>
-                <p>Nosso posto de saúde está aberto de segunda a sexta-feira, das 08:00 às 18:00. Não abrimos aos finais de semana e feriados. Para serviços de urgência, consulte os posto de saúde de referência da região.</p>
-            </details>
-            <details>
-                <summary>Como posso saber se o posto está funcionando em horário especial?</summary>
-                <p>Informações sobre horários especiais (feriados ou eventos) são atualizadas em nosso site e redes sociais.</p>
-            </details>
-        </section>
+    <section class="faq">
+        <h4>2. Horários de Atendimento</h4>
+        <details>
+            <summary>Quais são os horários de funcionamento do posto de saúde?</summary>
+            <p>Nosso posto de saúde está aberto de segunda a sexta-feira, das 08:00 às 18:00. Não abrimos aos finais de semana e feriados. Para serviços de urgência, consulte os posto de saúde de referência da região.</p>
+        </details>
+        <details>
+            <summary>Como posso saber se o posto está funcionando em horário especial?</summary>
+            <p>Informações sobre horários especiais (feriados ou eventos) são atualizadas em nosso site e redes sociais.</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>3. Urgências e Emergências</h4>
-            <details>
-                <summary>O que fazer em caso de emergência?</summary>
-                <p>Em casos de emergência, procure a unidade de pronto atendimento (UPA) ou o hospital mais próximo. Nosso posto de saúde realiza atendimentos de urgência básica, mas não possui estrutura para atendimentos graves.</p>
-            </details>
-        </section>
+    <section class="faq">
+        <h4>3. Urgências e Emergências</h4>
+        <details>
+            <summary>O que fazer em caso de emergência?</summary>
+            <p>Em casos de emergência, procure a unidade de pronto atendimento (UPA) ou o hospital mais próximo. Nosso posto de saúde realiza atendimentos de urgência básica, mas não possui estrutura para atendimentos graves.</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>4. Exames e Resultados</h4>
-            <details>
-                <summary>Como agendar exames?</summary>
-                <p>Os exames são agendados após avaliação médica. Caso o exame seja necessário, o médico realizará o encaminhamento. Após o encaminhamento entre no site e agende o exame no botão "agende aqui</p>
-            </details>
-        </section>
+    <section class="faq">
+        <h4>4. Exames e Resultados</h4>
+        <details>
+            <summary>Como agendar exames?</summary>
+            <p>Os exames são agendados após avaliação médica. Caso o exame seja necessário, o médico realizará o encaminhamento. Após o encaminhamento entre no site e agende o exame no botão "agende aqui</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>5. Programas e Serviços de Saúde</h4>
-            <details>
-                <summary>Quais programas de saúde estão disponíveis?</summary>
-                <p>Oferecemos diversos programas de saúde, como: Programa de Saúde da Família, Vacinação, Pré-natal, Controle de doenças crônicas, Saúde Mental e mais.</p>
-            </details>
-        </section>
+    <section class="faq">
+        <h4>5. Programas e Serviços de Saúde</h4>
+        <details>
+            <summary>Quais programas de saúde estão disponíveis?</summary>
+            <p>Oferecemos diversos programas de saúde, como: Programa de Saúde da Família, Vacinação, Pré-natal, Controle de doenças crônicas, Saúde Mental e mais.</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>6. Cadastro no SUS</h4>
-            <details>
-                <summary>Como me cadastrar no SUS?</summary>
-                <p>O cadastro no SUS pode ser feito diretamente no posto de saúde. Basta apresentar um documento de identidade e comprovante de residência.</p>
-            </details>
-        </section>
+    <section class="faq">
+        <h4>6. Cadastro no SUS</h4>
+        <details>
+            <summary>Como me cadastrar no SUS?</summary>
+            <p>O cadastro no SUS pode ser feito diretamente no posto de saúde. Basta apresentar um documento de identidade e comprovante de residência.</p>
+        </details>
+    </section>
 
-        <section class="faq">
-            <h4>7. Dúvidas e Suporte</h4>
-            <details>
-                <summary>Preciso de ajuda, como posso entrar em contato?</summary>
-                <p>Se você não encontrou a resposta para sua dúvida, entre em contato com nossa equipe através dos seguintes meios:</p>
-                <ul>
-                    <li>Telefone de atendimento: <strong>(XX) XXXX-XXXX</strong></li>
-                    <li>E-mail de suporte: <strong>suporte@postosade.com.br</strong></li>
-                    <li>Redes sociais: <strong>@PostoSaudePublica</strong></li>
-                </ul>
-            </details>
-        </section>
-    </div>
+    <section class="faq">
+        <h4>7. Dúvidas e Suporte</h4>
+        <details>
+            <summary>Preciso de ajuda, como posso entrar em contato?</summary>
+            <p>Se você não encontrou a resposta para sua dúvida, entre em contato com nossa equipe através dos seguintes meios:</p>
+            <ul>
+                <li>Telefone de atendimento: <strong>(XX) XXXX-XXXX</strong></li>
+                <li>E-mail de suporte: <strong>suporte@postosade.com.br</strong></li>
+                <li>Redes sociais: <strong>@PostoSaudePublica</strong></li>
+            </ul>
+        </details>
+    </section>
+</div>
 
-    <footer>
-        <p>&copy; CliniCall | Todos os direitos reservados.</p>
-    </footer>
+<footer>
+    <p>&copy; CliniCall | Todos os direitos reservados.</p>
+</footer>
 
             </div>
           </div>

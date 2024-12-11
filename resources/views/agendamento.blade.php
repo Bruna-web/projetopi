@@ -26,8 +26,17 @@
       </a>
     </div>
 
-    <form class="agendamento-form">
-      <!-- Passo 1: Especialidade -->
+    <form class="agendamento-form" method="POST" action="{{ route('agendamento.store') }}">
+      @csrf
+
+      <label for="posto">Escolha o Posto de Saúde:</label>
+      <select id="posto" name="posto" required>
+        <option value="" disabled selected>Selecione...</option>
+        <option value="posto1">Unidade Básica de Saúde (UBS) Centro</option>
+        <option value="posto2">Unidade Básica de Saúde (UBS) do Bairro São João</option>
+        <option value="posto3">Unidade Básica de Saúde (UBS) do Bairro Novo</option>
+      </select>
+
       <label for="especialidade">Setores:</label>
       <select id="especialidade" name="especialidade" required>
         <option value="" disabled selected>Selecione...</option>
@@ -44,13 +53,21 @@
         <option value="triagem">Sala de Triagem (Recepção e Classificação de Risco)</option>
       </select>
 
-      <!-- Passo 2: Médico -->
-      <label for="medico">Médico:</label>
+      <div id="exames-container" style="display:none;">
+        <label for="exames">Escolha o Exame:</label>
+        <select id="exames" name="exames">
+          <option value="" disabled selected>Selecione...</option>
+          <option value="exame1">Exame de Sangue</option>
+          <option value="exame2">Raio-X</option>
+          <option value="exame3">Ultrassonografia</option>
+        </select>
+      </div>
+
+      <label for="medico">Especialista:</label>
       <select id="medico" name="medico" required>
         <option value="" disabled selected>Selecione...</option>
       </select>
 
-      <!-- Passo 3: Data e Hora -->
       <label for="data">Data:</label>
       <input type="date" id="data" name="data" required>
 
@@ -66,101 +83,105 @@
         <option value="16:00">16:00</option>
       </select>
 
-      <!-- Passo 4: Dados Pessoais -->
       <label for="nome">Nome Completo:</label>
       <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
       <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+      <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
       <label for="telefone">Telefone:</label>
-      <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+      <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required pattern="\(\d{2}\) \d{5}-\d{4}">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
       <button type="submit">Agendar Consulta</button>
     </form>
   </main>
 
-  <!-- Modal de Confirmação -->
-  <div class="modal fade" id="modalAgendamento" tabindex="-1" role="dialog" aria-labelledby="modalAgendamentoLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalAgendamentoLabel">Confirmação de Agendamento</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="msgAgendamento"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
-  $(document).ready(function() {
-      const especialidadeMedicos = {
-        "atendimento-medico": ["Dr. João Silva", "Dra. Ana Souza"],
-        "enfermagem": ["Enf. Carlos Lima", "Enf. Mariana Ribeiro"],
-        "farmacia": ["Farm. Paula Costa"],
-        "exames-laboratorio": ["Dr. Pedro Alves"],
-        "vacina": ["Enf. Luiza Santos"],
-        "odontologia": ["Dr. Marcos Vinícius", "Dra. Clara Mendes"],
-        "psicologia": ["Psic. Laura Nunes", "Psic. Felipe Andrade"],
-        "fisioterapia": ["Fisio. André Martins"],
-        "nutricao": ["Nut. Camila Braga"],
-        "controle-doencas-cronicas": ["Dr. Júlio Cesar"],
-        "triagem": ["Enf. Ricardo Silva"]
+    $(document).ready(function() {
+      const medicosPorPosto = {
+        "posto1": {
+          "atendimento-medico": ["Dr. Roberto Costa", "Dra. Simone Oliveira"],
+          "enfermagem": ["Enf. Pedro Lima", "Enf. Julia Soares"],
+          "farmacia": ["Farm. Beatriz Almeida", "Farm. Marcos Henrique"],
+          "exames-laboratorio": ["Dr. Carla Souza", "Dr. Luiz Silva"],
+          "vacina": ["Enf. Paula Mendes", "Enf. Alice Rodrigues"],
+          "odontologia": ["Dr. Alan Pereira", "Dra. Raquel Nunes"],
+          "psicologia": ["Psic. Gabriela Lima", "Psic. Daniel Pires"],
+          "fisioterapia": ["Fisio. Letícia Alves", "Fisio. Rafael Costa"],
+          "nutricao": ["Nut. Bianca Santos", "Nut. Fábio Martins"],
+          "controle-doencas-cronicas": ["Dr. Alexandre Silva", "Dra. Fernanda Costa"],
+          "triagem": ["Enf. Renato Gomes", "Enf. Camila Pereira"]
+        },
+        "posto2": {
+          "atendimento-medico": ["Dr. André Dias", "Dra. Helena Costa"],
+          "enfermagem": ["Enf. Gabriel Silva", "Enf. Lívia Fernandes"],
+          "farmacia": ["Farm. Rodrigo Silva", "Farm. Carolina Pinto"],
+          "exames-laboratorio": ["Dr. Fernanda Martins", "Dr. Tiago Rocha"],
+          "vacina": ["Enf. Letícia Souza", "Enf. Mariana Santos"],
+          "odontologia": ["Dr. Eduardo Moreira", "Dra. Natália Ferreira"],
+          "psicologia": ["Psic. Roberto Oliveira", "Psic. Carolina Pires"],
+          "fisioterapia": ["Fisio. Lucas Rocha", "Fisio. Silvia Gomes"],
+          "nutricao": ["Nut. Andréia Silva", "Nut. João Lima"],
+          "controle-doencas-cronicas": ["Dr. Lucas Barbosa", "Dra. Priscila Lima"],
+          "triagem": ["Enf. Juliana Ramos", "Enf. Felipe Santos"]
+        },
+        "posto3": {
+          "atendimento-medico": ["Dr. Rafael Costa", "Dra. Fernanda Oliveira"],
+          "enfermagem": ["Enf. Paulo Soares", "Enf. Camila Ramos"],
+          "farmacia": ["Farm. Mariana Oliveira", "Farm. Rodrigo Souza"],
+          "exames-laboratorio": ["Dr. Roberto Almeida", "Dr. Tânia Lima"],
+          "vacina": ["Enf. Larissa Pereira", "Enf. José Carlos"],
+          "odontologia": ["Dr. Marcos Almeida", "Dra. Paula Silva"],
+          "psicologia": ["Psic. Adriana Costa", "Psic. Bruno Nascimento"],
+          "fisioterapia": ["Fisio. Valéria Oliveira", "Fisio. Rodrigo Martins"],
+          "nutricao": ["Nut. Karla Almeida", "Nut. Eduardo Souza"],
+          "controle-doencas-cronicas": ["Dr. Caio Lima", "Dra. Simone Rocha"],
+          "triagem": ["Enf. João Almeida", "Enf. Fernanda Nunes"]
+        }
       };
 
-      $('#especialidade').on('change', function() {
-        const especialidade = $(this).val();
-        const medicos = especialidadeMedicos[especialidade] || [];
-        const medicoSelect = $('#medico');
-        medicoSelect.empty();
-        medicoSelect.append('<option value="" disabled selected>Selecione...</option>');
-        medicos.forEach(medico => {
-          medicoSelect.append(`<option value="${medico}">${medico}</option>`);
-        });
+      const feriados = ["2024-12-25", "2024-01-01"];
+
+      function validarData(date) {
+        const day = date.getDay();
+        const dateString = date.toISOString().split('T')[0];
+        return day !== 0 && day !== 6 && !feriados.includes(dateString);
+      }
+
+      $('#data').on('input', function() {
+        const inputDate = new Date($(this).val());
+        if (!validarData(inputDate)) {
+          alert("A data selecionada não pode ser em um final de semana ou feriado.");
+          $(this).val('');
+        }
       });
 
-      $('.agendamento-form').on('submit', function(e) {
-        e.preventDefault();
-        
-        // Coleta os dados
+      $('#posto, #especialidade').on('change', function() {
+        const posto = $('#posto').val();
         const especialidade = $('#especialidade').val();
-        const medico = $('#medico').val();
-        const data = new Date($('#data').val());
-        const hora = $('#hora').val();
-        const nome = $('#nome').val();
-        const cpf = $('#cpf').val();
-        const telefone = $('#telefone').val();
 
-        $.ajax({
-          url: "{{ route('agendamento.store') }}",
-          type: "POST",
-          data: {
-            _token: "{{ csrf_token() }}", 
-            especialidade,
-            medico,
-            data: data.toLocaleDateString('pt-BR'),
-            hora,
-            nome,
-            cpf,
-            telefone
-          },
-          success: function(response) {
-            window.location.href = "{{ route('agendamento.confirmacao') }}";
-          },
-          error: function() {
-            alert("Ocorreu um erro ao processar o agendamento. Tente novamente.");
-          }
-        });
+        if (posto && especialidade) {
+          const medicos = medicosPorPosto[posto][especialidade] || [];
+          const medicoSelect = $('#medico');
+          medicoSelect.empty();
+          medicoSelect.append('<option value="" disabled selected>Selecione...</option>');
+          medicos.forEach(medico => {
+            medicoSelect.append(`<option value="${medico}">${medico}</option>`);
+          });
+        }
       });
-  });
+
+      $('#especialidade').on('change', function() {
+        if ($(this).val() === 'exames-laboratorio') {
+          $('#exames-container').show();
+        } else {
+          $('#exames-container').hide();
+        }
+      });
+    });
   </script>
 </body>
 </html>
